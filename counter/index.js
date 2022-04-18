@@ -7,19 +7,9 @@ function resetCount(){
 }
 function increaseCount(){
     count.innerText=++a;
-    if(a>0){
-        count.style.color="green";
-    }
-    else if(a<0){
-        count.style.color="red";
-    }
+    a>0 ? count.style.color="green": count.style.color="red";
 }
 function decreaseCount(){
     count.innerText=--a;
-    if(a>0){
-        count.style.color="green";
-    }
-    else if(a<0){
-        count.style.color="red";
-    }
+    a>0 ? count.style.color="green": count.style.color="red";
 }
