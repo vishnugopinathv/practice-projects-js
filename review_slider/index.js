@@ -75,3 +75,4 @@ randomBtn.addEventListener('click',()=>{
     console.log(currentItem)
     viewPerson();
 })
+
