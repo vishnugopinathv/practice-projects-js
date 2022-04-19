@@ -46,31 +46,31 @@ const reviews = [
   const nextBtn=document.getElementById("next-btn");
   const randomBtn=document.getElementById("random-btn");
   let currentItem=0;
-  window.addEventListener('DOMContentLoaded',function(){
+  window.addEventListener('DOMContentLoaded',()=>{
       viewPerson();
   })
-  function viewPerson(){
+  const viewPerson=()=>{
       const item= reviews[currentItem];
       img.src=item.img;
       author.innerText=item.name;
       position.innerText=item.job;
       review.innerText=item.text;
   }
-  prevBtn.addEventListener('click',function(){
+  prevBtn.addEventListener('click',()=>{
         currentItem--;
         if(currentItem<0){
             currentItem=reviews.length-1;
         }
         viewPerson();
   })
-  nextBtn.addEventListener('click',function(){
+  nextBtn.addEventListener('click',()=>{
     currentItem++;
     if(currentItem>reviews.length-1){
         currentItem=0;
     }
     viewPerson();
 })
-randomBtn.addEventListener('click',function(){
+randomBtn.addEventListener('click',()=>{
     currentItem= Math.floor(Math.random()*reviews.length);
     console.log(currentItem)
     viewPerson();

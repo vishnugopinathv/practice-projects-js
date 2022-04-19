@@ -26,11 +26,13 @@ img{
 }
 #author{
     letter-spacing: 0.1rem;
+    font-size: 1.1rem;
 }
 #position{
     text-transform: uppercase;
     font-size: 0.85rem;
     color: hsl(205, 78%, 60%);
+    margin-top: -1rem;
 }
 .container{
     width: 75%;
@@ -41,6 +43,9 @@ img{
     padding: 2rem;
     border-radius: 0.5rem;
     margin: 1rem;
+}
+.review-container:hover{
+    box-shadow: 0 5px 15px rgb(0,0,0,0.5);
 }
 #review{
     color: hsl(210, 22%, 49%);
