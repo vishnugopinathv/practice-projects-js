@@ -34,11 +34,12 @@ img{
 }
 .container{
     width: 75%;
-    max-width: 560px;
+    max-width: 660px;
 }
 .review-container{
-    box-shadow: 0 5px 15px rgb(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgb(0,0,0,0.25);
     padding: 2rem;
+    border-radius: 0.5rem;
     margin: 1rem;
 }
 #review{
@@ -48,12 +49,12 @@ img{
 .btn{
     border: 0;
     background-color: transparent;
-    color: hsl(205, 88%, 61%);
+    color: hsl(205, 88%, 61%,0.65);
     font-size: 1.5rem;
     cursor: pointer;
 }
 .btn:hover{
-    color: hsl(205, 88%, 61%,0.65);
+    color: hsl(205, 88%, 61%);
 }
 
 #random-btn{
