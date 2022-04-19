@@ -1,0 +1,73 @@
+main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Open Sans',sans-serif;
+}
+h1{
+    color: black;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+}
+.underline{
+    border-bottom: 5px solid rgb(50, 177, 219);
+    width: 75px;
+    margin: auto;
+    position: relative;
+    bottom: 1.5rem;
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+#author{
+    letter-spacing: 0.1rem;
+}
+#position{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: hsl(205, 78%, 60%);
+}
+.container{
+    width: 75%;
+    max-width: 560px;
+}
+.review-container{
+    box-shadow: 0 5px 15px rgb(0,0,0,0.1);
+    padding: 2rem;
+    margin: 1rem;
+}
+#review{
+    color: hsl(210, 22%, 49%);
+
+}
+.btn{
+    border: 0;
+    background-color: transparent;
+    color: hsl(205, 88%, 61%);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.btn:hover{
+    color: hsl(205, 88%, 61%,0.65);
+}
+
+#random-btn{
+    background-color: transparent;
+    border: 2px solid  hsl(205, 78%, 60%);
+    color: hsl(205, 89%, 70%);
+    padding: 0.25rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px black;
+    cursor: pointer;
+}
+#random-btn:hover{
+    color: black;
+    background-color:hsl(205, 78%, 60%);
+    transition: 0.3s linear;
+}
