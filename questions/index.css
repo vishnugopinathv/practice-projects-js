@@ -6,6 +6,7 @@
     box-shadow: 5px 5px 15px hsl(0, 0%, 50%,0.5);
     width: 75vw;
     max-width: 560px;
+    position: relative;
 }
 main{
     min-height: 100vh;
@@ -20,7 +21,6 @@ h1{
     padding: 1rem;
 }
 .question{
-    position: relative;
     font-family: 'Open Sans',sans-serif;
     letter-spacing: 5px;
     padding: 1rem 0;
@@ -30,14 +30,15 @@ h1{
     color: grey;
     height: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in;
 }
 .question i{
     font-size: 1.5rem;
     color: #c59d5f;
+    cursor: pointer;
     position: absolute;
     right: 1rem;
-    cursor: pointer;
+    top: 2rem;
 }
 .show-answer{
     height:4rem;
@@ -46,4 +47,8 @@ h1{
 }
 .button-click{
     transform: rotate(90deg);
+}
+.minus{
+    display: none;
+    visibility: hidden
 }
