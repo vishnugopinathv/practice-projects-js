@@ -19,7 +19,7 @@ main{
     padding: 1rem 0;
 }
 .heading{
-    padding: 4rem;
+    padding: 1rem;
 }
 #item-container{
     display: flex;
@@ -46,8 +46,9 @@ main{
     letter-spacing: 0.15rem;
     border-bottom: 1px black dotted;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
     margin: 0 1rem;
+    font-size: 0.875rem;
     padding:  0 0.5rem 0.5rem;
 }
 .price{
@@ -115,8 +116,5 @@ main{
     }
     main{
         justify-content: flex-start;
-    }
-    h1{
-        font-size: 2.5rem;
     }
 }
