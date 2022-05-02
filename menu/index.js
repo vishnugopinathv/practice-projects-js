@@ -79,13 +79,23 @@ const menu = [
     img: "./images/item-10.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "california steak",
+    category: "brunch",
+    price: 15.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  }
+
 ];
 const btn = document.getElementsByTagName("button");
 const container = document.getElementById("item-container");
-
+const menuContainer=document.querySelector(".menu-container");
 window.addEventListener("DOMContentLoaded", displayAll());
 function displayAll() {
   const items = menu.map((val) => {
+    
     return `<div class="item">
         <div class="image-container">
           <img src=${val.img} alt="" class="item-image" />
@@ -99,12 +109,14 @@ function displayAll() {
             <p class="description">
               ${val.desc}
             </p>
+            <div class="buy">Buy</div>
           </div>
         </div>
       </div>`;
   });
   let item = items.join("");
   container.innerHTML = item;
+  displayBuy();
 }
 
 for (let i = 0; i < btn.length; i++) {
@@ -130,12 +142,63 @@ for (let i = 0; i < btn.length; i++) {
             <p class="description">
               ${val.desc}
             </p>
+            <div class="buy">Buy</div>
           </div>
         </div>
       </div>`;
+      
       });
       displayitem=displayitem.join("");
       container.innerHTML=displayitem;
+      displayBuy();
+  //     const buyBtn=document.querySelectorAll(".buy");
+  // const menuItem =document.querySelectorAll(".item");
+  // const newContainer=document.querySelector(".buyitem");
+  // const heading=document.getElementById("heading");
+  // const itemHeading=document.querySelectorAll(".title");
+  // const buy= document.createElement("div");
+  // const cart= document.createElement("div");
+  // buy.className="buybtns";
+  // cart.className="buybtns";
+  // buy.innerText="Buy Now";
+  // cart.innerText="Add To Cart";
+  // for(let i=0;i<buyBtn.length;i++){
+  //   buyBtn[i].addEventListener('click',()=>{
+  //     menuContainer.style.display="none";
+  //     heading.innerText=itemHeading[i].innerText;
+  //     newContainer.appendChild(menuItem[i]);
+  //     newContainer.appendChild(buy);
+  //     newContainer.appendChild(cart);
+  //     buyBtn[i].style.display="none";
+  //   })
+  // }
+
+      // const buybtn= document.getElementsByClassName("buy");
+      // buybtn[i].innerHTML="click"
     }
   });
+}
+function displayBuy(){
+  const buyBtn=document.querySelectorAll(".buy");
+  const menuItem =document.querySelectorAll(".item");
+  const newContainer=document.querySelector(".buyitem");
+  const heading=document.getElementById("heading");
+  const itemHeading=document.querySelectorAll(".title");
+  const buy= document.createElement("div");
+  const cart= document.createElement("div");
+  buy.className="buybtns";
+  cart.className="buybtns";
+  buy.innerText="Buy Now";
+  cart.innerText="Add To Cart";
+  for(let i=0;i<buyBtn.length;i++){
+    buyBtn[i].addEventListener('click',()=>{
+      menuContainer.style.display="none";
+      heading.innerText=itemHeading[i].innerText;
+      newContainer.appendChild(menuItem[i]);
+      newContainer.appendChild(buy);
+      newContainer.appendChild(cart);
+      buyBtn[i].style.display="none";
+      newContainer.style.display="block";
+    })
+  }
 }
